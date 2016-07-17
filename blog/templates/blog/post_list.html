@@ -1,22 +1,50 @@
+{% load staticfiles %}
 <html>
-<head>
-       <title>Django Girls blog</title>
+  <head>
+       <title>Samri's Django Girls blog</title>
+       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+       <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+       <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
    </head>
+
    <body>
-       <div>
-           <h1><a href="">Django Girls Blog</a></h1>
-       </div>
+     <div class="page-header">
+       <h1><a href="/">Django Girls Blog</a></h1>
+      </div>
 
-       <div>
-           <p>published:7/2/2016, 2:14</p>
-           <h2><a href="">My first post</a></h2>
-           <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. <br />Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,<br /> tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-       </div>
 
-       <div>
-           <p>published:published:7/2/2016, 2:14 </p>
-           <h2><a href="">My second post</a></h2>
-           <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. <br /> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-       </div>
+      <div class="content container">
+          <div class="row">
+              <div class="col-md-8">
+
+                  <div class = "Post">
+                    <div class = "date">
+                    <p>published: 7/8/2016</p>
+                    </div>
+                    <h1><a href="{url 'post_detail' pk=post.pk }">First post</a></h1>
+                    <p> Aksjrtnasd  kajr  kjdf  kjdlk  rkg oig r  ermtn j v d,g e lkm d f. <br />skjt lklkjf e rg ;j. sd;lkfj.</p>
+                  </div>
+
+                  <div class = "Post">
+                    <div class = "date">
+                    <p>published:7/2/2016, 2:14 </p>
+                    </div>
+                    <h1><a href="">My second post</a></h1>
+                    <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. <br /> Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
+                  </div>
+
+                  <div class = "Post">
+                    <div class = "date">
+                    <p>published: 7/10/2016</p>
+                    </div>
+                    <h1><a href="">After learning the beauty of CSS and HTML(...but mostly CSS)</a></h1>
+                    <p>I learned to go with whatever works. whatever displays things like you want it to be displayed on the webpage. <br /> askdjf sdkfjlke elkjfs ekjt. sekjtlwkjkl elkjt wlkje g fv r gerge kjl. rkgjekj rkjtelkejwko lkjgs rkje glekj <br /> dkrjl t ekjr rekjv iurj lkjdf ekjry ksrjtk.</p>
+                  </div>
+
+            </div>
+          </div>
+        </div>
    </body>
 </html>
